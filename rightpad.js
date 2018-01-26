@@ -8,12 +8,12 @@ exports = module.exports = function rightPad (_string, _length, _char) {
   if (typeof _length !== 'number') {
     throw new Error('The length parameter must be a number.');
   }
-  if(typeof _char !== 'string' && _char) {
+  if (typeof _char !== 'string' && _char) {
     throw new Error('The character parameter must be a string.');
   }
 
   var i = -1;
-  _length = _length - _string.length;
+  _length -= _string.length;
   if (!_char && _char !== 0) {
     _char = ' ';
   }
